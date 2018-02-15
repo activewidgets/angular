@@ -1,0 +1,324 @@
+
+<style>
+
+.ax-grid {
+    border: 1px solid #ddd;
+    font: 13px/19px "Segoe UI", "Helvetica Neue";
+}
+
+
+
+.ax-resize-sensor {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    visibility: hidden;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.ax-sensor-box {
+    position: absolute;
+    overflow: scroll;
+    left: -99px;
+    top: -99px;
+    right: 0;
+    bottom: 0;
+}
+
+.ax-sensor-expand {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 99999px;
+    height: 99999px;
+}
+
+.ax-sensor-shrink {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 200%;
+}
+
+
+.ax-scrollbars {
+    display: inline;
+    background: #eee;
+}
+
+.ax-scrollbars-corner {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+}
+
+.ax-vertical-scrollbar {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    background: inherit;
+}
+
+.ax-horizontal-scrollbar {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: inherit;
+}
+
+.ax-vertical-plane {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 100%;
+    margin-left: -1px;
+    background: inherit;
+}
+
+.ax-horizontal-plane {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    margin-top: -1px;
+    background: inherit;
+}
+
+.ax-scrollbar-content {
+    display: block;
+    width: 1px;
+    height: 1px;
+}
+
+.ax-mac>::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+.ax-mac>::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.2);
+}
+
+
+.ax-top-view,
+.ax-bottom-view,
+.ax-main-view {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: inherit;
+}
+
+.ax-view-plane {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: -9999px;
+    bottom: -9999px;
+    left: 0;
+    right: 0;
+    transform: translateY(0);
+    transition: transform 100ms linear;
+    will-change: transform;
+    background: inherit;
+}
+
+.ax-before {
+    height: 9999px;
+}
+
+.ax-fixed-box,
+.ax-scrolling-box {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.ax-fixed-box {
+    width: 1px;
+    min-width: 100%;
+}
+
+.ax-fixed-borders,
+.ax-fixed-backgrounds {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 1px;
+    min-width: 100%;
+    max-width: inherit;
+}
+
+.ax-scrolling-borders,
+.ax-scrolling-backgrounds,
+.ax-fixed-rows,
+.ax-scrolling-rows {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 2000px;
+    height: 20000px;
+}
+
+.ax-scrolling-backgrounds,
+.ax-scrolling-borders,
+.ax-scrolling-rows {
+    transform: translateX(0);
+    transition: transform 100ms linear;
+}
+
+.ax-scrolling-borders {
+    display: flex;
+    overflow: visible;
+    height: 0;
+}
+
+.ax-scrolling-backgrounds {
+    display: flex;
+    z-index: -1;
+}
+
+.ax-fixed-rows {
+    min-width: 100%;
+    max-width: inherit;
+    width: 1px;
+}
+
+.ax-row {
+    min-width: 100%;
+    max-width: inherit;
+}
+
+.ax-cells {
+    display: flex;
+    min-width: 100%;
+    max-width: inherit;
+}
+
+.ax-spacer {
+    flex: 1;
+    max-width: inherit;
+}
+
+.ax-spacer>div {
+    display: none;
+}
+
+.ax-background {
+    width: 100px;
+    height: 20000px;
+}
+
+
+.ax-border {
+    position: relative;
+    width: 100px;
+}
+
+.ax-left-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20000px;
+    border-left: 1px solid #ccc;
+}
+
+.ax-right-border {
+    position: absolute;
+    top: 0;
+    right: -1px;
+    height: 20000px;
+    border-right: 1px solid #ccc;
+}
+
+
+.ax-grid,
+.ax-grid * {
+    box-sizing: border-box;
+}
+
+.ax-grid {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    background: #fff;
+}
+
+.ax-top-view .ax-row {
+    height: 30px;
+    line-height: 28px;
+    font-weight: bold;
+    color: #666;
+    background: #eee;
+}
+
+.ax-fixed-rows>* {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+.ax-row {
+    display: block;
+    border-width: 0px;
+    background: none;
+}
+
+.ax-before {
+    position: static;
+    z-index: auto;
+    background: none;
+}
+
+.ax-fixed-rows>.ax-row {
+    width: 100%;
+    position: static;
+    z-index: auto;
+}
+
+.ax-before+.ax-row,
+.ax-row+.ax-row {
+    border-top-width: 0px;
+}
+
+.ax-scrolling-rows>.ax-row {
+    width: 9999px;
+    border-color: transparent!important;
+    background: none!important;
+}
+
+
+.ax-cell {
+    display: inline-block;
+    overflow: hidden;
+    width: 100px;
+    padding: 0 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    text-rendering: optimizeSpeed;
+}
+
+
+</style>

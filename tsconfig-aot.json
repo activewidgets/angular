@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "sourceMap": false,
+        "declaration": true,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "target": "es5"
+    },
+    "files": [
+        "dist/index.ts"
+    ],
+    "angularCompilerOptions": {
+        "skipTemplateCodegen": true
+    }
+}

@@ -37,7 +37,7 @@ function buildComponent(options){
 
 
 for(var i in items){
-    if (typeof items[i] == 'object'){
+    if (items[i].name){
         exported.push(buildComponent(items[i]));
     }
 }
