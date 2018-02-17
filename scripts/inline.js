@@ -1,7 +1,7 @@
 
 let fs = require('fs'),
     items = require('@activewidgets/grid'),
-    builder = require('@activewidgets/frameworks/lib/angular/inline.js'),
+    builder = require('@activewidgets/frameworks/scripts/angular/inline.js'),
     templates = builder(items);
 
 let source = fs.readFileSync('index.js', 'utf8');

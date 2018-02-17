@@ -1,7 +1,7 @@
 
 let fs = require('fs'),
     items = require('@activewidgets/grid'),
-    builder = require('@activewidgets/frameworks/lib/angular/aot.js'),
+    builder = require('@activewidgets/frameworks/scripts/angular/aot.js'),
     source = builder(items);
 
 if (!fs.existsSync('dist')){
