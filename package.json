@@ -13,7 +13,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "node lib/aot.js && ngc -p tsconfig-aot.json && node lib/inline.js && rimraf dist/index.ts",
+    "build": "node lib/aot.js && ngc -p lib/aot.json && node lib/inline.js && rimraf dist/index.ts",
     "storybook": "npm run build && start-storybook -p 9001 -c storybook",
     "storybook:build": "npm run build && rimraf out/storybook && build-storybook -c storybook -o out/storybook",
     "docs": "gitbook serve docs out/docs",
