@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "outDir": "../esm5",
+        "allowJs": true,
+        "sourceMap": true,
+        "inlineSources": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": false,
+        "experimentalDecorators": false,
+        "skipLibCheck": true,
+        "module": "es2015",
+        "target": "es5"
+    },
+    "files": [
+        "../tmp/index.js"
+    ]
+}

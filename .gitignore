@@ -1,4 +1,8 @@
 node_modules
-dist
+bundles
+esm5
+esm2015
 out
+*.d.ts
+*.metadata.json
 *.bat
