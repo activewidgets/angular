@@ -1,6 +1,6 @@
 {
   "name": "@activewidgets/angular",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Datagrid component for angular",
   "author": "webmaster@activewidgets.com",
   "license": "MIT",
@@ -29,8 +29,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.1.tgz",
-    "@activewidgets/grid": "https://cdn.activewidgets.com/packages/grid-0.0.1.tgz"
+    "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.2.tgz",
+    "@activewidgets/grid": "https://cdn.activewidgets.com/packages/grid-0.0.2.tgz"
   },
   "devDependencies": {
     "@angular/common": "^5.2.5",
@@ -70,7 +70,9 @@
       },
       "__TRANSFORM_HTML__": true
     },
-    "testMatch": ["**/test/unit/**/*.ts"],
+    "testMatch": [
+      "**/test/unit/**/*.ts"
+    ],
     "testRegex": "",
     "preset": "jest-preset-angular",
     "setupTestFrameworkScriptFile": "<rootDir>/test/setup-jest.ts"
