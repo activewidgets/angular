@@ -6,3 +6,4 @@ out
 *.d.ts
 *.metadata.json
 *.bat
+package-lock.json
