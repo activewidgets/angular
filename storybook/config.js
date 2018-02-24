@@ -2,7 +2,8 @@
 import { configure } from '@storybook/angular';
 
 function loadStories() {
-    require('./stories.ts');
+    require('./demo.ts');
+    require('./e2e.ts');
 }
 
 configure(loadStories, module);

@@ -3,6 +3,5 @@ import {storiesOf} from '@storybook/angular';
 
 import basic from '../examples/basic.ts';
 
-storiesOf('datagrid', module)
-
+storiesOf('Demo', module)
     .add('basic', basic);

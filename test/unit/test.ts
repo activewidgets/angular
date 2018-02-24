@@ -21,7 +21,7 @@ describe('ng testbed', () => {
         el = fixture.nativeElement;
     });
 
-    it('css', (){
+    it('css', () => {
         expect(el.className).toBe('ax-grid');
     });
 });
