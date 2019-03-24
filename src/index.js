@@ -12,11 +12,12 @@ let declarations = [],
 export const Grid = build(grid);
 export const Row = build(row);
 export const Slot = AngularBuilder.Slot;
+export const ForOf = AngularBuilder.ForOf;
 
 export class  AxModule {
     static get annotations() { return [new core.NgModule({
         imports: [CommonModule],
-        exports: [Slot, Grid, Row],
+        exports: [Slot, ForOf, Grid, Row],
         declarations
     })]}
 }
