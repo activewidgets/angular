@@ -2,12 +2,12 @@
 import * as core from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {AngularBuilder} from '@activewidgets/frameworks';
-import {path, grid, row} from '@activewidgets/grid';
+import {grid, row} from '@activewidgets/grid';
 
 import '@activewidgets/grid/css/index.css';
 
 let declarations = [],
-    build = AngularBuilder.init(core, declarations, path);
+    build = AngularBuilder.init(core, declarations);
 
 export const Grid = build(grid);
 export const Row = build(row);
