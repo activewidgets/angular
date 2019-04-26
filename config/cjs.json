@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "../esm5",
+        "outDir": "../bundles",
         "allowJs": true,
         "sourceMap": true,
         "inlineSources": true,
@@ -9,10 +9,10 @@
         "emitDecoratorMetadata": false,
         "experimentalDecorators": false,
         "skipLibCheck": true,
-        "module": "es2015",
+        "module": "commonjs",
         "target": "es5"
     },
     "files": [
-        "../tmp/index.js"
+        "../index.js"
     ]
 }

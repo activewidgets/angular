@@ -13,6 +13,6 @@
         "target": "es2015"
     },
     "files": [
-        "../tmp/index.js"
+        "../index.js"
     ]
 }
