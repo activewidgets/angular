@@ -1,6 +1,6 @@
 
 import { configure } from '@storybook/angular';
-import '@activewidgets/grid/css/index.css';
+import '../css';
 
 function loadStories() {
     require('./demo.ts');

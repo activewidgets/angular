@@ -1,6 +1,6 @@
 
 import * as core from '@angular/core';
-import AX from '@activewidgets/frameworks';
+import AX from '@activewidgets/frameworks/angular';
 import {grid, row} from '@activewidgets/grid';
 
 let {component, module, internal} = AX(core);
