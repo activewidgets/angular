@@ -26,8 +26,6 @@
     "build:aot": "ngc -p config/aot.json",
     "storybook": "npm run build && start-storybook -p 9001 -c storybook",
     "storybook:build": "npm run build && rimraf out/storybook && build-storybook -c storybook -o out/storybook",
-    "docs": "gitbook serve docs out/docs",
-    "docs:build": "rimraf out/docs && gitbook build docs out/docs",
     "test": "jest"
   },
   "dependencies": {
@@ -52,7 +50,6 @@
     "babel-core": "^6.26.3",
     "chromedriver": "^2.38.2",
     "core-js": "^2.5.5",
-    "gitbook-cli": "^2.3.2",
     "jest": "^22.4.3",
     "jest-preset-angular": "^5.2.2",
     "rimraf": "^2.6.2",
