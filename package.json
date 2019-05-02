@@ -1,6 +1,6 @@
 {
   "name": "@activewidgets/angular",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Datagrid component for angular",
   "author": "webmaster@activewidgets.com",
   "license": "MIT",
@@ -10,10 +10,12 @@
   "typings": "./index.d.ts",
   "files": [
     "bundles",
+    "css",
     "esm5",
     "esm2015",
     "*.d.ts",
     "*.metadata.json",
+    "index.js",
     "LICENSE",
     "README.md"
   ],
