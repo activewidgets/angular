@@ -1,7 +1,5 @@
 node_modules
-bundles
-esm5
-esm2015
+dist
 out
 *.d.ts
 *.metadata.json

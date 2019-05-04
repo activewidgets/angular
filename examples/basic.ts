@@ -1,11 +1,11 @@
 
 import {Component} from '@angular/core';
-import {AxModule} from '../';
+import {Module} from '../';
 import {columns, rows} from './data/customers.js';
 
 
 @Component({
-    selector: 'xx',
+    selector: 'ax-app',
     template: `<ax-grid [rows]="rows" [columns]="columns"></ax-grid>`
 })
 class component {
@@ -14,7 +14,7 @@ class component {
 }
 
 
-let moduleMetadata = {imports: [AxModule]};
+let moduleMetadata = {imports: [Module]};
 
 export default () => ({
     component, moduleMetadata

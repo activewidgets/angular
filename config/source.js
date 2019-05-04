@@ -94,13 +94,18 @@ function module(name, item, meta){
 }
 
 
-function expand(name, item){
-
+function expand1(name, item){
     let meta = item.annotations[0];
-
     switch(meta.ngMetadataName){
         case 'Component': return component(name, item, meta);
         case 'Directive': return directive(name, item, meta);
+    }
+}
+
+
+function expand2(name, item){
+    let meta = item.annotations[0];
+    switch(meta.ngMetadataName){
         case 'NgModule': return module(name, item, meta);
     }
 }
@@ -108,7 +113,13 @@ function expand(name, item){
 
 for (let i in items){
     if (typeof items[i] == 'function' && items[i].annotations) {
-        source += expand(i, items[i]) || '';
+        source += expand1(i, items[i]) || '';
+    }
+}
+
+for (let i in items){
+    if (typeof items[i] == 'function' && items[i].annotations) {
+        source += expand2(i, items[i]) || '';
     }
 }
 

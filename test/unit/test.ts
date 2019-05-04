@@ -2,7 +2,7 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {By} from '@angular/platform-browser';
 
-import {AxModule, Grid} from '../../';
+import {Module, Grid} from '../../';
 
 test('test 1', () => {
     expect(typeof Grid).toBe('function');
@@ -14,7 +14,7 @@ describe('ng testbed', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            imports: [AxModule]
+            imports: [Module]
         });
 
         fixture = TestBed.createComponent(Grid);
