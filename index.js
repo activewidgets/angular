@@ -1,25 +1,10 @@
 
-import * as core from '@angular/core';
+import * as angular from '@angular/core';
 import framework from '@activewidgets/frameworks/angular';
-import {grid, row} from '@activewidgets/grid';
+import * as components from '@activewidgets/grid';
+import * as metadata from '@activewidgets/grid/metadata';
 
-let {component, module, internal} = framework(core);
+const {build, internal} = framework(angular);
 
-export const Row = component({
-    selector: 'ax-row',
-    inputs: ['row', 'columns'],
-    source: row
-});
-
-export const Grid = component({
-    selector: 'ax-grid',
-    inputs: ['columns', 'rows', 'templates'],
-    source: grid
-});
-
-export const Dynamic = internal.Dynamic;
-export const VNodes = internal.VNodes;
-export const ForOf = internal.ForOf;
-
-export const Module = module(Row, Grid);
-
+export const {Grid, Row} = build(components, metadata);
+export const {Dynamic, VNodes, ForOf, Module} = internal;
