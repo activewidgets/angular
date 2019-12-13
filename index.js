@@ -1,10 +1,8 @@
 
-import * as angular from '@angular/core';
-import framework from '@activewidgets/frameworks/angular';
-import * as components from '@activewidgets/grid';
+import adapter from '@activewidgets/frameworks/angular';
+import * as sources from '@activewidgets/grid/js';
 import * as metadata from '@activewidgets/grid/metadata';
+import * as angular from '@angular/core';
 
-const {build, internal} = framework(angular);
-
-export const {Grid, Row} = build(components, metadata);
-export const {Dynamic, VNodes, ForOf, Module} = internal;
+export const {build, Dynamic, VNodes, ForOf, Module} = adapter(angular);
+export const {Grid, Row} = build(sources, metadata);

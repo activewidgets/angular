@@ -4,7 +4,7 @@
   "description": "Datagrid component for angular",
   "author": "webmaster@activewidgets.com",
   "license": "MIT",
-  "main": "./dist/ax-angular.js",
+  "main": "./dist/ax-angular.umd.js",
   "module": "./dist/ax-angular.esm.js",
   "typings": "./index.d.ts",
   "files": [

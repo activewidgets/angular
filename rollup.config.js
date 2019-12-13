@@ -5,19 +5,21 @@ import babel from 'rollup-plugin-babel';
 let globals = {
     '@angular/core': 'ng.core',
     '@activewidgets/frameworks/angular': 'ActiveWidgets.frameworks.angular',
-    '@activewidgets/grid': 'ActiveWidgets.components'
+    '@activewidgets/grid/js': 'ActiveWidgets.components',
+    '@activewidgets/grid/metadata': 'ActiveWidgets.metadata'
 };
 
 export default {
     input: 'index.js',
     output: [
-        {file: 'dist/ax-angular.js', format: 'umd', sourcemap: true, name: 'ActiveWidgets.Angular', extend: true, globals},
+        {file: 'dist/ax-angular.umd.js', format: 'umd', sourcemap: true, name: 'ActiveWidgets.Angular', extend: true, globals},
         {file: 'dist/ax-angular.esm.js', format: 'esm', sourcemap: true}
     ],
     external: [
         '@angular/core',
         '@activewidgets/frameworks/angular',
-        '@activewidgets/grid'
+        '@activewidgets/grid/js',
+        '@activewidgets/grid/metadata'
     ],
     plugins: [
         resolve(),
