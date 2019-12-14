@@ -20,7 +20,7 @@ npm install @activewidgets/angular
 import {Component, NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
-import {AxModule} from '@activewidgets/angular';
+import {Module} from '@activewidgets/angular';
 import {columns, rows} from './data.js';
 
 class AppComponent {
@@ -33,7 +33,7 @@ class AppComponent {
     static get annotations() { return [new Component({
         selector: '#app',
         template: `
-            <ax-grid [rows]="rows" [columns]="columns"></ax-grid>
+            <ax-datagrid [rows]="rows" [columns]="columns"></ax-datagrid>
         `
     })]}
 }
@@ -41,7 +41,7 @@ class AppComponent {
 
 class AppModule {
     static get annotations() { return [new NgModule({
-        imports: [BrowserModule, AxModule],
+        imports: [BrowserModule, Module],
         declarations: [AppComponent],
         bootstrap: [AppComponent]
     })]}

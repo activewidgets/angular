@@ -5,8 +5,8 @@ import babel from 'rollup-plugin-babel';
 let globals = {
     '@angular/core': 'ng.core',
     '@activewidgets/frameworks/angular': 'ActiveWidgets.frameworks.angular',
-    '@activewidgets/grid/js': 'ActiveWidgets.components',
-    '@activewidgets/grid/metadata': 'ActiveWidgets.metadata'
+    '@activewidgets/datagrid/js': 'ActiveWidgets.components',
+    '@activewidgets/datagrid/metadata': 'ActiveWidgets.metadata'
 };
 
 export default {
@@ -18,8 +18,8 @@ export default {
     external: [
         '@angular/core',
         '@activewidgets/frameworks/angular',
-        '@activewidgets/grid/js',
-        '@activewidgets/grid/metadata'
+        '@activewidgets/datagrid/js',
+        '@activewidgets/datagrid/metadata'
     ],
     plugins: [
         resolve(),

@@ -1,8 +1,8 @@
 
 import adapter from '@activewidgets/frameworks/angular';
-import * as sources from '@activewidgets/grid/js';
-import * as metadata from '@activewidgets/grid/metadata';
+import * as sources from '@activewidgets/datagrid/js';
+import * as metadata from '@activewidgets/datagrid/metadata';
 import * as angular from '@angular/core';
 
 export const {build, Dynamic, VNodes, ForOf, Module} = adapter(angular);
-export const {Grid, Row} = build(sources, metadata);
+export const {Datagrid, Row} = build(sources, metadata);
