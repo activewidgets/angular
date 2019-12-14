@@ -1,6 +1,6 @@
 {
   "name": "@activewidgets/angular",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Datagrid component for angular",
   "author": "webmaster@activewidgets.com",
   "license": "MIT",
@@ -22,8 +22,8 @@
     "build:aot": "ngc -p config/aot.json"
   },
   "dependencies": {
-    "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.5.tgz",
-    "@activewidgets/datagrid": "https://cdn.activewidgets.com/packages/datagrid-0.0.5.tgz"
+    "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.6.tgz",
+    "@activewidgets/datagrid": "https://cdn.activewidgets.com/packages/datagrid-0.0.6.tgz"
   },
   "devDependencies": {
     "@angular/compiler": "^7.0.0",
