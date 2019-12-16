@@ -4,9 +4,9 @@ import babel from 'rollup-plugin-babel';
 
 let globals = {
     '@angular/core': 'ng.core',
-    '@activewidgets/frameworks/angular': 'ActiveWidgets.frameworks.angular',
-    '@activewidgets/datagrid/js': 'ActiveWidgets.components',
-    '@activewidgets/datagrid/metadata': 'ActiveWidgets.metadata'
+    '@activewidgets/frameworks/angular': 'ActiveWidgets.Frameworks.Angular',
+    '@activewidgets/datagrid/js': 'ActiveWidgets.Components',
+    '@activewidgets/datagrid/metadata': 'ActiveWidgets.Metadata'
 };
 
 export default {
