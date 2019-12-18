@@ -23,12 +23,12 @@
   },
   "dependencies": {
     "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.6.tgz",
-    "@activewidgets/datagrid": "https://cdn.activewidgets.com/packages/datagrid-0.0.6.tgz"
+    "@activewidgets/datagrid": "https://cdn.activewidgets.com/packages/datagrid-0.0.6.tgz",
+    "@angular/core": "*"
   },
   "devDependencies": {
-    "@angular/compiler": "^7.0.0",
-    "@angular/compiler-cli": "^7.0.0",
-    "@angular/core": "^7.0.0",
+    "@angular/compiler": "*",
+    "@angular/compiler-cli": "*",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "rimraf": "^2.0.0",
