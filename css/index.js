@@ -1,2 +1,2 @@
 
-require('@activewidgets/datagrid/css/index.css');
+require('@activewidgets/datagrid/css');

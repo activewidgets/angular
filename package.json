@@ -20,6 +20,8 @@
     "build:source": "node config/source.js",
     "build:js": "rollup -c",
     "build:aot": "ngc -p config/aot.json",
+    "public": "parcel build examples/index.html -d public --no-minify",
+    "start": "parcel examples/index.html -d public --open",
     "test": "jest"
   },
   "dependencies": {
@@ -36,6 +38,8 @@
     "@angular/platform-browser-dynamic": "^8.0.0",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
+    "ng-dynamic-component": "^5.0.0",
+    "parcel": "^1.0.0",
     "rimraf": "^2.0.0",
     "rollup": "^1.0.0",
     "rollup-plugin-babel": "^4.0.0",
