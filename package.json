@@ -22,7 +22,7 @@
     "build:aot": "ngc -p config/aot.json",
     "public": "parcel build examples/index.html -d public --no-minify",
     "start": "parcel examples/index.html -d public --open",
-    "test": "jest"
+    "test": "npm run build && npm run public && jest"
   },
   "dependencies": {
     "@activewidgets/frameworks": "https://cdn.activewidgets.com/packages/frameworks-0.0.6.tgz",
@@ -30,6 +30,7 @@
     "@angular/core": "*"
   },
   "devDependencies": {
+    "@activewidgets/puppeteer": "^0.0.3",
     "@activewidgets/testing": "^0.0.1",
     "@angular/common": "^8.0.0",
     "@angular/compiler": "^8.0.0",
@@ -60,6 +61,10 @@
         "setupFilesAfterEnv": [
           "<rootDir>/test/adapter/setup.js"
         ]
+      },
+      {
+        "displayName": "Visual",
+        "preset": "@activewidgets/puppeteer"
       }
     ]
   },
