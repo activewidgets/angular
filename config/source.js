@@ -32,7 +32,7 @@ function component(name, item, meta){
         host = JSON.stringify(meta.host),
         template = JSON.stringify(meta.template),
         inputs = meta.inputs.map(n => `@Input() ${n}: any;`).join(' '),
-        outputs = meta.outputs.map(n => `@Output() ${n} = new EventEmitter<any>();`).join(' '),
+        outputs = meta.outputs.map(n => `@Output('${n.split(':')[1]}') ${n.split(':')[0]} = new EventEmitter<any>();`).join(' '),
         params = item.parameters.map(param);
 
     return `

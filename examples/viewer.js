@@ -98,7 +98,7 @@ class AppComponent {
 
 class AppModule {
     static get annotations() { return [new NgModule({
-        imports: [BrowserModule, DynamicModule.withComponents([components.Datagrid]), components.Module],
+        imports: [BrowserModule, DynamicModule.withComponents([components.Datagrid]), components.AxModule],
         declarations: [AppComponent],
         bootstrap: [AppComponent]
     })]}
