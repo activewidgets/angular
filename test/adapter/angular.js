@@ -22,7 +22,12 @@ export function render(Component, props){
         component = fixture.componentInstance;
 
     for(let i in props){
-        component[i] = props[i];
+        if (i.slice(0, 2) == 'on'){
+            component[i].subscribe(props[i]);
+        }
+        else {
+            component[i] = props[i];
+        }
     }
 
     fixture.detectChanges();
