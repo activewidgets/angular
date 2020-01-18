@@ -2,7 +2,7 @@
 
 import {getQueriesForElement} from '@testing-library/dom';
 import {TestBed} from '@angular/core/testing';
-import {AxModule} from '@activewidgets/components';
+import * as components from '@activewidgets/components';
 
 import {BrowserDynamicTestingModule, platformBrowserDynamicTesting} from '@angular/platform-browser-dynamic/testing';
 
@@ -11,8 +11,22 @@ import {BrowserDynamicTestingModule, platformBrowserDynamicTesting} from '@angul
         platformBrowserDynamicTesting()
     );
 
+let AxModule = components.AxModule;
 
-export function render(Component, props){
+let tags = {};
+
+Object.keys(components).forEach(name => {
+    tags['ax-' + name.toLowerCase()] = components[name];
+});
+
+
+export function render(comp, props){
+
+    let Component = tags[comp];
+
+    if (!Component){
+        throw new Error('component not found - ' + comp);
+    }
 
     TestBed.configureTestingModule({
         imports: [AxModule]
