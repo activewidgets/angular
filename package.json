@@ -17,10 +17,10 @@
   ],
   "scripts": {
     "build": "npm run build:js && npm run build:source && npm run build:aot && rimraf tmp ",
-    "build:js": "rimraf dist && rollup -c",
+    "build:js": "rimraf dist/* && rollup -c",
     "build:source": "node config/source.js",
     "build:aot": "ngc -p config/aot.json",
-    "public": "npm run build && rimraf public && parcel build examples/index.html -d public",
+    "public": "npm run build && rimraf public/* && parcel build examples/index.html -d public",
     "start": "parcel examples/index.html -d public --open",
     "test": "npm run public && jest"
   },
