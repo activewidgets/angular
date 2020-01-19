@@ -14,6 +14,13 @@ import * as northwind from './northwind.js';
 import '../css';
 
 
+let tags = {};
+
+Object.keys(components).forEach(name => {
+    tags['ax-' + name.toLowerCase()] = components[name];
+});
+
+
 enableProdMode();
 
 
@@ -64,7 +71,7 @@ class AppComponent {
     ngOnInit(){
 
         let render = (component, props) => {
-            this.component = component;
+            this.component = tags[component];
             this.inputs = props;
         };
 
@@ -79,7 +86,7 @@ class AppComponent {
             this.showError = location.hash && !item;
 
             if (typeof item == 'function'){
-                item({render}, components, templates, data);
+                item({render}, templates, data);
             }
 
             this.name = name;
