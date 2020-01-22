@@ -20,7 +20,7 @@ Object.keys(components).forEach(name => {
 });
 
 
-export function render(comp, props){
+export function mount(comp, props){
 
     let Component = tags[comp];
 
