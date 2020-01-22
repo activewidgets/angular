@@ -20,7 +20,7 @@
     "build:js": "rimraf dist/* && rollup -c",
     "build:source": "node config/source.js",
     "build:aot": "ngc -p config/aot.json",
-    "output": "npm run build && rimraf out/* && parcel build examples/**/*.html -d out",
+    "output": "npm run build && rimraf out/* && parcel build examples/index.html examples/*/*.html -d out",
     "start": "serve-examples",
     "test": "npm run output && jest"
   },
