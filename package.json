@@ -20,9 +20,9 @@
     "build:js": "rimraf dist/* && rollup -c",
     "build:source": "node config/source.js",
     "build:aot": "ngc -p config/aot.json",
-    "public": "npm run build && rimraf public/* && parcel build examples/index.html -d public",
-    "start": "parcel examples/index.html -d public --open",
-    "test": "npm run public && jest"
+    "output": "npm run build && rimraf out/* && parcel build examples/**/*.html -d out",
+    "start": "serve-examples",
+    "test": "npm run output && jest"
   },
   "dependencies": {
     "@activewidgets/frameworks": "0.0.9",
@@ -50,6 +50,9 @@
     "rxjs": "^6",
     "typescript": ">=3.4 <3.6",
     "zone.js": "~0.9.1"
+  },
+  "alias": {
+    "@activewidgets/angular": "./"
   },
   "jest": {
     "projects": [
