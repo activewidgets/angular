@@ -8,10 +8,16 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {DynamicModule} from 'ng-dynamic-component';
 
 import {Viewer} from '@activewidgets/examples';
-import * as pages from '../index.js';
 import * as components from '../../';
+import * as pages from './examples.js';
+import readme from '../README.md';
+import logo from './angular.svg';
+import pkg from '../../package.json';
 
 import '../../css';
+
+
+let framework = 'Angular';
 
 
 let tags = {};
@@ -49,7 +55,7 @@ class AppComponent {
 
         let viewer = new Viewer({
             target: document.body,
-            props: {pages, mount, clean}
+            props: {framework, pkg, logo, readme, pages, mount, clean}
         });
 
     }
