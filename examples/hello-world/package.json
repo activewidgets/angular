@@ -1,7 +1,7 @@
 {
-  "name": "angular-demo",
+  "name": "angular-hello-world",
   "version": "1.0.0",
-  "description": "Demo - ActiveWidgets/Angular",
+  "description": "Hello World - ActiveWidgets/Angular",
   "keywords": [],
   "main": "src/main.js",
   "scripts": {
