@@ -8,9 +8,9 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {DynamicModule} from 'ng-dynamic-component';
 
 import {Viewer} from '@activewidgets/examples';
-import * as components from '../../';
+import * as components from '@activewidgets/angular';
 import * as pages from './examples.js';
-import readme from '../README.md';
+import readme from '../demo/README.md';
 import logo from './angular.svg';
 import pkg from '../../package.json';
 
