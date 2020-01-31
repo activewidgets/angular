@@ -1,7 +1,7 @@
 {
-  "name": "angular-columns",
+  "name": "angular-events",
   "version": "1.0.0",
-  "description": "Columns, rows - ActiveWidgets/Angular",
+  "description": "User events - ActiveWidgets/Angular",
   "keywords": [],
   "main": "src/main.js",
   "scripts": {
