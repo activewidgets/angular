@@ -3,8 +3,46 @@ import { Component } from '@angular/core';
 import { northwind } from '@activewidgets/examples/data';
 import * as flags from '@activewidgets/examples/flags';
 import options from './options';
-import template from './app.html';
 import './styles.css';
+
+
+const template = `
+
+<ax-datagrid [columns]="columns" [rows]="rows" [options]="options" (row)="onRow($event)">
+
+    <ng-template name="company" let-data="data">
+        <div>
+            <div class="bold blue">{{data.customerID}}</div>
+            <div class="small">{{data.companyName}}</div>
+        </div>
+    </ng-template>
+
+    <ng-template name="contact" let-data="data">
+        <div>
+            <div class="bold">{{data.contactName}}</div>
+            <div class="small">{{data.contactTitle}}</div>
+        </div>
+    </ng-template>
+
+    <ng-template name="address" let-data="data">
+        <div>
+            <div class="small">{{data.address}}</div>
+            <div class="small">{{data.postalCode}} <span>{{data.city}}</span></div>
+        </div>
+    </ng-template>
+
+    <ng-template name="country" let-text="text">
+        <div><img [src]="flags[text]"/>{{text}}</div>
+    </ng-template>
+
+    <ng-template name="phone" let-data="data">
+        <div>
+            <div class="small phone">{{data.phone}}</div>
+            <div class="small fax">{{data.fax}}</div>
+        </div>
+    </ng-template>
+
+</ax-datagrid>`;
 
 
 export class App {
