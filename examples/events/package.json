@@ -9,7 +9,8 @@
     "build": "parcel build index.html"
   },
   "dependencies": {
-    "@activewidgets/angular": "0.0.10",
+    "@activewidgets/angular": "*",
+    "@activewidgets/examples": "*",
     "@angular/core": "^8",
     "@angular/common": "^8",
     "@angular/compiler": "^8",
