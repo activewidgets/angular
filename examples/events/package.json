@@ -2,7 +2,7 @@
   "name": "angular-events",
   "version": "1.0.0",
   "description": "User events - ActiveWidgets/Angular",
-  "keywords": [],
+  "license": "MIT",
   "main": "src/main.js",
   "scripts": {
     "start": "parcel index.html --open",
