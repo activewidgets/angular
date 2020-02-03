@@ -82,10 +82,12 @@
     "url": "git+https://github.com/activewidgets/angular.git"
   },
   "keywords": [
+    "activewidgets",
+    "datagrid",
     "angular"
   ],
   "bugs": {
     "url": "https://github.com/activewidgets/angular/issues"
   },
-  "homepage": "https://github.com/activewidgets/angular#readme"
+  "homepage": "https://activewidgets.com"
 }

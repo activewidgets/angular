@@ -9,7 +9,7 @@ import { columns, rows } from "@activewidgets/examples/data";
 import './styles.css';
 
 
-const template = `<ax-datagrid [columns]="columns" [rows]="rows" (mouse)="onMouse($event)"></ax-datagrid>`;
+const template = `<ax-datagrid (mouse)="onMouse($event)" [columns]="columns" [rows]="rows"></ax-datagrid>`;
 
 
 export class App {
