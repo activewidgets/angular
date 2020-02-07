@@ -33,7 +33,7 @@
     "@angular/core": "*"
   },
   "devDependencies": {
-    "@activewidgets/examples": "0.0.5",
+    "@activewidgets/examples": "0.0.6",
     "@activewidgets/options": "3.0.0",
     "@activewidgets/puppeteer": "0.0.4",
     "@activewidgets/testing": "0.0.3",
@@ -45,7 +45,11 @@
     "@angular/platform-browser-dynamic": "^8",
     "@babel/core": "^7",
     "@babel/preset-env": "^7",
+    "express": "^4",
+    "marked": "^0.8",
     "ng-dynamic-component": "^5",
+    "opn": "^5",
+    "parcel-bundler": "^1.12",
     "rimraf": "^3",
     "rollup": "^1.20",
     "rollup-plugin-babel": "^4",
