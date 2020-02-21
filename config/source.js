@@ -31,9 +31,9 @@ function component(name, item, meta){
     let selector = JSON.stringify(meta.selector),
         host = JSON.stringify(meta.host),
         template = JSON.stringify(meta.template),
-        inputs = meta.inputs.map(n => `@Input() ${n}: any;`).join(' '),
-        outputs = meta.outputs.map(n => `@Output('${n.split(':')[1]}') ${n.split(':')[0]} = new EventEmitter<any>();`).join(' '),
-        params = item.parameters.map(param);
+        inputs = (meta.inputs || []).map(n => `@Input() ${n}: any;`).join(' '),
+        outputs = (meta.outputs || []).map(n => `@Output('${n.split(':')[1]}') ${n.split(':')[0]} = new EventEmitter<any>();`).join(' '),
+        params = (item.parameters || []).map(param);
 
     return `
         @Component({
@@ -59,7 +59,7 @@ function component(name, item, meta){
 function directive(name, item, meta){
 
     let selector = JSON.stringify(meta.selector),
-        inputs = meta.inputs.map(n => `@Input() ${n}: any;`).join(' '),
+        inputs = (meta.inputs || []).map(n => `@Input() ${n}: any;`).join(' '),
         params = item.parameters.map(param);
 
     return `
