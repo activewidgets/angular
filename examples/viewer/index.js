@@ -7,7 +7,7 @@
 import 'core-js/es7/reflect';
 import 'zone.js/dist/zone';
 
-import {Component, NgModule, enableProdMode} from '@angular/core';
+import {Component, ChangeDetectorRef, NgModule, enableProdMode} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import {DynamicModule} from 'ng-dynamic-component';
@@ -37,24 +37,44 @@ enableProdMode();
 
 let template = `
     <ng-template [ngIf]="component">
-        <ndc-dynamic [ndcDynamicComponent]="component" [ndcDynamicInputs]="inputs"></ndc-dynamic>
+        <ndc-dynamic [ndcDynamicComponent]="component" [ndcDynamicInputs]="inputs" [ndcDynamicOutputs]="outputs"></ndc-dynamic>
     </ng-template>
 `;
 
 
 class AppComponent {
 
+    constructor(cdr){
+        this.cdr = cdr;
+    }
+
     ngOnInit(){
 
         let mount = (component, props) => {
+
             this.component = tags[component];
-            this.inputs = props;
+
+            this.inputs = {};
+            this.outputs = {};
+
+            Object.keys(props).forEach(i => {
+                if (i.indexOf('on') === 0){
+                    this.outputs[i.slice(2).toLowerCase()] = props[i];
+                }
+                else {
+                    this.inputs[i] = props[i];
+                }
+            });
+
+            this.cdr.detectChanges();
         };
 
 
         let clean = () => {
             this.component = null;
             this.inputs = {};
+            this.outputs = {};
+            this.cdr.detectChanges();
         };
 
 
@@ -64,6 +84,10 @@ class AppComponent {
         });
 
     }
+
+    static get parameters() { return [
+        ChangeDetectorRef
+    ]}
 
     static get annotations() { return [new Component({
         selector: '#app',
