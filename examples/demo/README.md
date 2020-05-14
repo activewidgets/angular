@@ -14,6 +14,8 @@ This is a simple demo showing some of the features of ActiveWidgets/Angular data
 - International number/date formats
 - Custom column types (presets)
 
+[Angular Datagrid - Get started](https://docs.activewidgets.com/guide/env/angular/)
+
 ### Virtualized scrolling
 
 The datagrid implements virtualized scrolling - rendering only the visible rows and adding/removing extra rows on the fly 
@@ -136,5 +138,5 @@ like popups, overlays, gantt charts, schedulers etc.
 
 Read more:
 
-- [Get started](https://docs.activewidgets.com/guide/starting/angular/)
+- [Angular Datagrid - Get started](https://docs.activewidgets.com/guide/env/angular/)
 - [API](https://docs.activewidgets.com/api/)

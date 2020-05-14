@@ -16,5 +16,5 @@ onMouse({row}){
 
 Read more:
 
-- [Get started](https://docs.activewidgets.com/guide/starting/angular/#user-events)
+- [Angular Datagrid - Get started](https://docs.activewidgets.com/guide/env/angular/#user-events)
 - [API - mouse event](https://docs.activewidgets.com/api/datagrid/mouse-event/)
