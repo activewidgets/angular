@@ -1,7 +1,7 @@
 
 [Open fullscreen](/events/) | [Source on github](https://github.com/activewidgets/angular/tree/master/examples/events) | [Edit on Codesandbox](https://codesandbox.io/s/github/activewidgets/angular/tree/master/examples/events)
 
-The datagrid emits composite [mouse](https://docs.activewidgets.com/api/datagrid/mouse-event/) event 
+The datagrid emits composite [mouse](https://activewidgets.com/api/datagrid/mouse-event/) event 
 which makes it easier to find the elements affected by the user action -
 
 ```js
@@ -16,5 +16,5 @@ onMouse({row}){
 
 Read more:
 
-- [Angular Datagrid - Get started](https://docs.activewidgets.com/guide/env/angular/#user-events)
-- [API - mouse event](https://docs.activewidgets.com/api/datagrid/mouse-event/)
+- [Angular Datagrid - Get started](https://activewidgets.com/guide/env/angular/#user-events)
+- [API - mouse event](https://activewidgets.com/api/datagrid/mouse-event/)

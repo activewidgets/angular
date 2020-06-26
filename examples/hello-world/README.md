@@ -29,4 +29,4 @@ Finally, create the component and assign the data:
 
 Read more:
 
- - [Angular Datagrid - Get started](https://docs.activewidgets.com/guide/env/angular/)
+ - [Angular Datagrid - Get started](https://activewidgets.com/guide/env/angular/)
