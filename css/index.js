@@ -4,4 +4,4 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-require('@activewidgets/datagrid/css');
+require('@activewidgets/datagrid/dist/datagrid.css');
