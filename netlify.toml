@@ -1,7 +1,7 @@
 
 [build]
   publish = "out"
-  command = "npm run output"
+  command = "npm run examples"
     
 [[redirects]]
   from = "/examples/*"
