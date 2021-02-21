@@ -1,6 +1,6 @@
 {
   "name": "@activewidgets/angular",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "Datagrid component for angular",
   "author": "ActiveWidgets SARL",
   "license": "MIT",
@@ -27,15 +27,15 @@
     "test": "npm run examples && jest"
   },
   "dependencies": {
-    "@activewidgets/datagrid": "3.0.7",
-    "@activewidgets/frameworks": "3.0.7"
+    "@activewidgets/datagrid": "3.0.8",
+    "@activewidgets/frameworks": "3.0.8"
   },
   "peerDependencies": {
     "@angular/core": "*"
   },
   "devDependencies": {
     "@activewidgets/examples": "0.0.11",
-    "@activewidgets/options": "3.0.7",
+    "@activewidgets/options": "3.0.8",
     "@activewidgets/puppeteer": "0.0.5",
     "@activewidgets/testing": "0.0.4",
     "@angular/common": "^8",
