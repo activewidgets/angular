@@ -4,7 +4,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import 'core-js/es7/reflect';
+import 'core-js/proposals/reflect-metadata';
 import 'zone.js/dist/zone';
 
 import { NgModule, enableProdMode } from '@angular/core';

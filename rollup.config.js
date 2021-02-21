@@ -44,6 +44,7 @@ export default {
         resolve(),
         babel({
             babelrc: false,
+            babelHelpers: 'bundled',
             exclude: 'node_modules/**',
             presets: [["@babel/env", {modules: false}]]
         }),
