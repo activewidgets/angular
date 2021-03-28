@@ -21,7 +21,7 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "vite": "^2.0.0-beta.70"
+    "vite": "^2"
   },
   "private": true
 }
