@@ -13,7 +13,7 @@ import './styles.css';
 
 const template = `
 
-<ax-datagrid [columns]="columns" [rows]="rows" [options]="options" (row)="onRow($event)">
+<ax-datagrid [columns]="columns" [rows]="rows" [options]="options">
 
     <ng-template name="company" let-data="data">
         <div>
@@ -68,32 +68,6 @@ export class App {
         this.options = options;
         this.flags = flags;
     }
-
-
-    onRow(row){
-
-        const {data, cells} = row;
-
-        // calculated values
-        cells.amount = 2000 * Math.random();
-        cells.date = Date.now() - 500 * 86400000 * Math.random();
-
-
-        // dynamic row style
-        if (data.country === 'France'){
-            row.class = 'bg-green';
-        }
-
-        // dynamic cell styles
-        if (data.city === 'London'){
-            cells.address = {class: 'circle'};
-        }
-
-        if (data.contactTitle === 'Owner'){
-            cells.contact = {class: 'star'};
-        }
-    }
-
 
     static get annotations() { return [new Component({
         selector: '#app',
