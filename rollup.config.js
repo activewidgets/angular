@@ -7,8 +7,7 @@ import rootpkg from './package.json';
 let globals = {
     '@angular/core': 'ng.core',
     '@activewidgets/frameworks/angular': 'ActiveWidgets.Frameworks.Angular',
-    '@activewidgets/datagrid/js': 'ActiveWidgets.Components',
-    '@activewidgets/datagrid/metadata': 'ActiveWidgets.Metadata'
+    '@activewidgets/datagrid/js': 'ActiveWidgets.Components'
 };
 
 
@@ -37,8 +36,7 @@ export default {
     external: [
         '@angular/core',
         '@activewidgets/frameworks/angular',
-        '@activewidgets/datagrid/js',
-        '@activewidgets/datagrid/metadata'
+        '@activewidgets/datagrid/js'
     ],
     plugins: [
         resolve(),
