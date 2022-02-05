@@ -36,8 +36,8 @@
   "devDependencies": {
     "@activewidgets/examples": "0.0.11",
     "@activewidgets/options": "3.0.9",
-    "@activewidgets/puppeteer": "0.0.5",
-    "@activewidgets/testing": "0.0.4",
+    "@activewidgets/puppeteer": "0.0.6",
+    "@activewidgets/testing": "0.0.6",
     "@angular/common": "^8",
     "@angular/compiler": "^8",
     "@angular/compiler-cli": "^8",
@@ -79,10 +79,7 @@
       },
       {
         "displayName": "Visual",
-        "preset": "@activewidgets/puppeteer",
-        "testMatch": [
-          "<rootDir>/test/visual/**/*.js"
-        ]
+        "preset": "@activewidgets/puppeteer"
       }
     ]
   },
