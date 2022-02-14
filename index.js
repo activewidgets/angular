@@ -9,4 +9,4 @@ import * as sources from '@activewidgets/datagrid/js';
 import * as angular from '@angular/core';
 
 export const {build, AxName, AxChildren, AxDynamic, AxTemplates, AxModule} = adapter(angular);
-export const {Datagrid, Row} = build(sources);
+export const {Datagrid, Row, Cells} = build(sources);

@@ -13,7 +13,7 @@ import './styles.css';
 
 const template = `
 
-<ax-datagrid [columns]="columns" [rows]="rows" [options]="options">
+<ax-datagrid [columns]="columns" [rows]="rows" [calc]="calc" [options]="options">
 
     <ng-template name="company" let-data="data">
         <div>
@@ -65,6 +65,14 @@ export class App {
         ];
 
         this.rows = northwind.customers;
+
+        this.calc = function(){
+            return {
+                amount: 2000 * Math.random(),
+                date: Date.now() - 500 * 86400000 * Math.random()
+            };
+        };
+        
         this.options = options;
         this.flags = flags;
     }
