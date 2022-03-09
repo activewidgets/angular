@@ -2,6 +2,7 @@
 /dist
 /out
 /test/diffs
+/work
 /*.d.ts
 /*.metadata.json
 /*.bat
