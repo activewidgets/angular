@@ -9,7 +9,7 @@ import { columns, rows } from "@activewidgets/examples/data";
 import './styles.css';
 
 
-const template = `<ax-datagrid (mouse)="onMouse($event)" [columns]="columns" [rows]="rows"></ax-datagrid>`;
+const template = `<ax-datagrid [columns]="columns" [rows]="rows" (init)="onInit($event)" (click)="onClick($event)"></ax-datagrid>`;
 
 
 export class App {
@@ -20,10 +20,18 @@ export class App {
     }
 
 
-    onMouse({row}){
-        alert(`row ${row.key} clicked!`);
+    onInit(api){
+        this.gridAPI = api;
     }
-
+    
+    
+    onClick(event){
+        let cell = this.gridAPI.cellFromElement(event.target); 
+        if (cell && cell.section === 'main') {
+            alert(`row ${cell.row.index + 1} clicked!`);
+        }
+    }
+    
 
     static get annotations() { return [new Component({
         selector: '#app',
