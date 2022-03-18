@@ -11,7 +11,7 @@
   "dependencies": {
     "@activewidgets/angular": "^3",
     "@activewidgets/examples": "*",
-    "@activewidgets/options": "*",
+    "@activewidgets/options": "^3",
     "@angular/core": "^8",
     "@angular/common": "^8",
     "@angular/compiler": "^8",
@@ -24,6 +24,11 @@
   },
   "devDependencies": {
     "vite": "^2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/activewidgets/angular.git",
+    "directory": "examples/demo"
   },
   "private": true
 }

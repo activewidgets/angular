@@ -1,5 +1,5 @@
 
-[Open fullscreen](/demo/) | [Source on github](https://github.com/activewidgets/angular/tree/master/examples/demo) | [Edit on Codesandbox](https://codesandbox.io/s/github/activewidgets/angular/tree/master/examples/demo)
+[Open fullscreen](https://angular.activewidgets.com/demo/) | [Source on github](https://github.com/activewidgets/angular/tree/master/examples/demo) | [Edit on stackblitz](https://stackblitz.com/github/activewidgets/angular/tree/master/examples/demo?file=src/app.js)
 
 This is a simple demo showing some of the features of ActiveWidgets/Angular datagrid -
 
