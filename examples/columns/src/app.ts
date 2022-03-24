@@ -8,12 +8,9 @@ import { Component } from '@angular/core';
 import { northwind } from "@activewidgets/examples/data";
 
 
-const template = `<ax-datagrid [columns]="columns" [rows]="rows"></ax-datagrid>`;
-
-
 @Component({
     selector: '#app',
-    template
+    template: `<ax-datagrid [columns]="columns" [rows]="rows"></ax-datagrid>`
 })
 export class App {
 

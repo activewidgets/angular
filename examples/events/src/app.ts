@@ -8,12 +8,9 @@ import { Component } from '@angular/core';
 import { columns, rows } from "@activewidgets/examples/data";
 
 
-const template = `<ax-datagrid [columns]="columns" [rows]="rows" (init)="onInit($event)" (click)="onClick($event)"></ax-datagrid>`;
-
-
 @Component({
     selector: '#app',
-    template
+    template: `<ax-datagrid [columns]="columns" [rows]="rows" (init)="onInit($event)" (click)="onClick($event)"></ax-datagrid>`
 })
 export class App {
 
