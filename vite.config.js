@@ -1,6 +1,18 @@
 import {resolve} from 'path';
 import markdown from 'rollup-plugin-md';
 
+
+let html = () => ({
+    name: 'html',
+    transformIndexHtml: {enforce: 'pre', transform: (html, {path}) => {
+        return /\/[\w-]+\/index\.html$/.test(path) ? html.replace('</body>', `
+            <script type="module"> import "@angular/compiler"; import "./src/main.ts"; import "./src/styles.css"; </script>
+            </body>
+        `) : html;
+    }}
+});
+
+
 export default {
     root: 'examples',
     build: {
@@ -17,11 +29,11 @@ export default {
         }
     },
     plugins: [
-        markdown()
+        markdown(),
+        html()
     ],
     resolve: {
         alias: {
-            '@activewidgets/angular/css': resolve('./css/esm.js'),
             '@activewidgets/angular': resolve('./index.js')
         }    
     }
