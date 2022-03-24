@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@activewidgets/angular": "^3",
+    "@activewidgets/examples": "*",
+    "@activewidgets/options": "^3",
     "@angular/common": "~13.3.0",
     "@angular/compiler": "~13.3.0",
     "@angular/core": "~13.3.0",
