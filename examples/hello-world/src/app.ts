@@ -4,11 +4,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: '#app',
-  template: '<ax-datagrid [rows]="rows"></ax-datagrid>'
+    selector: '#app',
+    template: '<ax-datagrid [rows]="rows"></ax-datagrid>'
 })
 export class App {
     rows = [{ message: 'Hello, World!' }];

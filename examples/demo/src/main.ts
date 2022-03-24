@@ -15,9 +15,9 @@ import { App } from './app';
 enableProdMode();
 
 @NgModule({
-  imports: [BrowserModule, AxModule],
-  declarations: [App],
-  bootstrap: [App]
+    imports: [BrowserModule, AxModule],
+    declarations: [App],
+    bootstrap: [App]
 })
 class Module { }
 

@@ -18,12 +18,10 @@ export class App {
     rows = rows;
     gridAPI = null as any;
 
-
     onInit(api: any){
         this.gridAPI = api;
     }
-    
-    
+
     onClick(event: any){
         let cell = this.gridAPI.cellFromElement(event.target); 
         if (cell && cell.section === 'main') {
