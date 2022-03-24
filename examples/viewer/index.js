@@ -4,8 +4,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import 'core-js/proposals/reflect-metadata';
-import 'zone.js/dist/zone';
+import 'zone.js';
+import '@angular/compiler';
 
 import {Component, ChangeDetectorRef, NgModule, enableProdMode} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
@@ -18,8 +18,6 @@ import * as pages from './examples.js';
 import readme from '../demo/README.md';
 import logo from './angular.svg';
 import pkg from '../../package.json';
-
-import '../../css';
 
 
 let framework = 'Angular';
@@ -85,24 +83,24 @@ class AppComponent {
 
     }
 
-    static get parameters() { return [
-        ChangeDetectorRef
+    static get ctorParameters() { return [
+        {type: ChangeDetectorRef}
     ]}
-
-    static get annotations() { return [new Component({
-        selector: '#app',
-        template
-    })]}
 }
 
+Component({
+    selector: '#app',
+    template
+})(AppComponent);
 
-class AppModule {
-    static get annotations() { return [new NgModule({
-        imports: [BrowserModule, DynamicModule.withComponents([components.Datagrid]), components.AxModule],
-        declarations: [AppComponent],
-        bootstrap: [AppComponent]
-    })]}
-}
+
+class AppModule {}
+
+NgModule({
+    imports: [BrowserModule, DynamicModule, components.AxModule],
+    declarations: [AppComponent],
+    bootstrap: [AppComponent]
+})(AppModule);
 
 
 platformBrowserDynamic().bootstrapModule(AppModule);

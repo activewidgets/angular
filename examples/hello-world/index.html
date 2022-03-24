@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Hello World - ActiveWidgets/Angular</title>
+    <title>Angular Getting Started</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <div id="app"></div>
-    <script type="module" src="./src/main.js"></script>
+    <script type="module">
+        /* vite JIT */
+        import "@angular/compiler";
+        import "./src/main.ts";
+        import "./src/styles.css";
+    </script>
 </body>
 </html>

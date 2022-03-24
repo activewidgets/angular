@@ -21,7 +21,8 @@ export default {
     ],
     resolve: {
         alias: {
-            '@activewidgets/angular': resolve('./')
+            '@activewidgets/angular/css': resolve('./css/esm.js'),
+            '@activewidgets/angular': resolve('./index.js')
         }    
     }
 }

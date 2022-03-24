@@ -1,6 +1,8 @@
 
 import resolve from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
+import postcss from 'rollup-plugin-postcss';
+import sourcemaps from 'rollup-plugin-sourcemaps';
 import {terser} from 'rollup-plugin-terser';
 import rootpkg from './package.json';
 
@@ -28,7 +30,7 @@ function keepBanner(node, comment){
 
 
 export default {
-    input: 'index.js',
+    input: 'metadata.js',
     output: [
         {file: 'dist/ax-angular.umd.js', format: 'umd', sourcemap: true, name: 'ActiveWidgets.Angular', extend: true, banner, globals},
         {file: 'dist/ax-angular.esm.js', format: 'esm', sourcemap: true, banner}
@@ -39,6 +41,8 @@ export default {
         '@activewidgets/datagrid/js'
     ],
     plugins: [
+        postcss(),
+        sourcemaps(),
         resolve(),
         babel({
             babelrc: false,
