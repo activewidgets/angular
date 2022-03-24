@@ -1,5 +1,5 @@
 
-[Open fullscreen](https://angular.activewidgets.com/events/) | [Source on github](https://github.com/activewidgets/angular/tree/master/examples/events) | [Edit on stackblitz](https://stackblitz.com/github/activewidgets/angular/tree/master/examples/events?file=src/app.js)
+[Open fullscreen](https://angular.activewidgets.com/events/) | [Source on github](https://github.com/activewidgets/angular/tree/master/examples/events) | [Edit on stackblitz](https://stackblitz.com/github/activewidgets/angular/tree/master/examples/events?file=src/app.ts)
 
 The datagrid emits composite [mouse](https://activewidgets.com/api/datagrid/mouse-event/) event 
 which makes it easier to find the elements affected by the user action -

@@ -51,7 +51,7 @@ Then you can use `ax-datagrid` and other `ax-...` tags in your component templat
 ```html
 <ax-datagrid [rows]="rows"></ax-datagrid>
 ```
-[Live example](https://angular.activewidgets.com/hello-world/) | [Source on github](https://github.com/activewidgets/angular/tree/master/examples/hello-world) | [Edit on stackblitz](https://stackblitz.com/github/activewidgets/angular/tree/master/examples/hello-world?file=src/app.js)
+[Live example](https://angular.activewidgets.com/hello-world/) | [Source on github](https://github.com/activewidgets/angular/tree/master/examples/hello-world) | [Edit on stackblitz](https://stackblitz.com/github/activewidgets/angular/tree/master/examples/hello-world?file=src/app.ts)
 
 
 ## Data properties
@@ -83,7 +83,7 @@ const rows = northwind.customers;
 <ax-datagrid [columns]="columns" [rows]="rows"></ax-datagrid>
 ```
 
-[Live example](https://angular.activewidgets.com/columns/) | [Source on github](https://github.com/activewidgets/angular/tree/master/examples/columns) | [Edit on stackblitz](https://stackblitz.com/github/activewidgets/angular/tree/master/examples/columns?file=src/app.js)
+[Live example](https://angular.activewidgets.com/columns/) | [Source on github](https://github.com/activewidgets/angular/tree/master/examples/columns) | [Edit on stackblitz](https://stackblitz.com/github/activewidgets/angular/tree/master/examples/columns?file=src/app.ts)
 
 
 ## User events
@@ -100,7 +100,7 @@ function onMouse({row, column}){
 <ax-datagrid (mouse)="onMouse($event)" [columns]="columns" [rows]="rows"></ax-datagrid>
 ```
 
-[Live example](https://angular.activewidgets.com/events/) | [Source on github](https://github.com/activewidgets/angular/tree/master/examples/events) | [Edit on stackblitz](https://stackblitz.com/github/activewidgets/angular/tree/master/examples/events?file=src/app.js)
+[Live example](https://angular.activewidgets.com/events/) | [Source on github](https://github.com/activewidgets/angular/tree/master/examples/events) | [Edit on stackblitz](https://stackblitz.com/github/activewidgets/angular/tree/master/examples/events?file=src/app.ts)
 
 ## More info
 
