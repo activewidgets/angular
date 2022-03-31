@@ -4,8 +4,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import 'zone.js';
-
 import { NgModule, enableProdMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';

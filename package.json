@@ -31,7 +31,7 @@
     "@angular/core": "*"
   },
   "devDependencies": {
-    "@activewidgets/examples": "0.0.13",
+    "@activewidgets/examples": "0.0.15",
     "@activewidgets/options": "3.1.1",
     "@activewidgets/puppeteer": "0.0.6",
     "@angular/common": "^13",
