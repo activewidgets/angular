@@ -1,9 +1,11 @@
 
 import resolve from '@rollup/plugin-node-resolve';
+import terser from '@rollup/plugin-terser';
 import postcss from 'rollup-plugin-postcss';
-import sourcemaps from 'rollup-plugin-sourcemaps';
-import {terser} from 'rollup-plugin-terser';
-import rootpkg from './package.json';
+import fs from 'fs';
+
+let rootpkg = JSON.parse(read('./package.json'));
+
 
 let globals = {
     '@angular/core': 'ng.core',
@@ -14,7 +16,7 @@ let globals = {
 
 let banner = `/**
  * ${rootpkg.name} ${rootpkg.version}
- * Copyright (C) 2022 ActiveWidgets SARL. All Rights Reserved.
+ * Copyright (C) 2023 ActiveWidgets SARL. All Rights Reserved.
  * This code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this package.
  */
@@ -23,8 +25,13 @@ let banner = `/**
 
 function keepBanner(node, comment){
     if (comment.type == "comment2") {
-        return /\(C\) 2022 ActiveWidgets/.test(comment.value);
+        return /\(C\) 2023 ActiveWidgets/.test(comment.value);
     }
+}
+
+
+function read(filename){
+    return String(fs.readFileSync(filename, {encoding:'utf8'}));
 }
 
 
@@ -41,7 +48,6 @@ export default {
     ],
     plugins: [
         postcss(),
-        sourcemaps(),
         resolve(),
         terser({
             output: {comments: keepBanner}
