@@ -10,5 +10,5 @@ import * as angular from '@angular/core';
 
 import '@activewidgets/datagrid/dist/datagrid.css';
 
-export const {build, AxName, AxChildren, AxDynamic, AxTemplates, AxModule} = adapter(angular);
+export const {build, component, inject, AxName, AxChildren, AxDynamic, AxTemplates, AxModule} = adapter(angular);
 export const {Datagrid, Row, Cells} = build(sources);
