@@ -1,12 +1,17 @@
 let fs = require('fs'),
-    adapter = require('@activewidgets/frameworks/angular'),
+    converter = require('@activewidgets/frameworks/angular'),
     universal = require('@activewidgets/datagrid/js');
     
 import('@angular/core').then(core => {
     
-let items1 = adapter(core),
-    {Datagrid, Row, Cells} = items1.build(universal),
+let items1 = converter(core),
+    Datagrid = items1.component(universal.Datagrid),
+    Row = items1.component(universal.Row),
+    Cells = items1.component(universal.Cells),
     items = Object.assign({}, items1, {Datagrid, Row, Cells});
+
+items.AngularComponent = items.component;
+delete items.component;
     
 //import fs from 'fs';
 //import * as items from './index.js';
