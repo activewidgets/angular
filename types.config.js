@@ -1,8 +1,8 @@
-let fs = require('fs'),
-    converter = require('@activewidgets/frameworks/angular'),
-    universal = require('@activewidgets/datagrid/js');
-    
-import('@angular/core').then(core => {
+import fs from 'fs';
+import {Angular as converter} from '@activewidgets/frameworks';
+import * as universal from '@activewidgets/datagrid/js';
+import * as core from '@angular/core';
+
     
 let items1 = converter(core),
     Datagrid = items1.component(universal.Datagrid),
@@ -288,5 +288,3 @@ modules.forEach(type => {
 
 
 fs.writeFileSync('index.d.ts', source, 'utf8');
-
-});

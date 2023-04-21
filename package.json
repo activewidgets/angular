@@ -4,9 +4,14 @@
   "description": "Datagrid component for angular",
   "author": "ActiveWidgets SARL",
   "license": "MIT",
+  "type": "module",
   "main": "./dist/ax-angular.umd.js",
   "module": "./dist/ax-angular.esm.js",
   "types": "./index.d.ts",
+  "exports": {
+    "import": "./dist/ax-angular.esm.js",
+    "require": "./dist/ax-angular.umd.js"
+  },
   "files": [
     "dist",
     "index.d.ts",
