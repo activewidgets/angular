@@ -5,12 +5,12 @@
   "author": "ActiveWidgets SARL",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/ax-angular.umd.js",
-  "module": "./dist/ax-angular.esm.js",
+  "main": "./dist/ax-angular.esm.js",
   "types": "./index.d.ts",
   "exports": {
+    "types": "./index.d.ts",
     "import": "./dist/ax-angular.esm.js",
-    "require": "./dist/ax-angular.umd.js"
+    "require": "./dist/ax-angular.umd.cjs"
   },
   "files": [
     "dist",

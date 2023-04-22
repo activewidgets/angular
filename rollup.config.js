@@ -38,7 +38,7 @@ function read(filename){
 export default {
     input: 'metadata.js',
     output: [
-        {file: 'dist/ax-angular.umd.js', format: 'umd', sourcemap: true, name: 'ActiveWidgets.Angular', extend: true, banner, globals},
+        {file: 'dist/ax-angular.umd.cjs', format: 'umd', sourcemap: true, name: 'ActiveWidgets.Angular', extend: true, banner, globals},
         {file: 'dist/ax-angular.esm.js', format: 'esm', sourcemap: true, banner}
     ],
     external: [
