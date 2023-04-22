@@ -10,7 +10,7 @@ import * as angular from '@angular/core';
 
 import '@activewidgets/datagrid/css';
 
-export const {component: AngularComponent, inject, AxName, AxContent, AxChildren, AxDynamic, AxTemplates, AxModule} = converter(angular);
+export const {component: AngularComponent, inject, AxSlot, AxContent, AxChildren, AxDynamic, AxTemplates, AxModule} = converter(angular);
 
 export const Datagrid = AngularComponent(_Datagrid);
 export const Row = AngularComponent(_Row);

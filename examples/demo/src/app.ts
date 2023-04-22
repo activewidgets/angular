@@ -16,32 +16,32 @@ import options from './options';
 
     <ax-datagrid [columns]="columns" [rows]="rows" [calc]="calc" [options]="options">
     
-        <ng-template name="company" let-data="data">
+        <ng-template slot="company" let-data="data">
             <div>
                 <div class="bold blue">{{data.customerID}}</div>
                 <div class="small">{{data.companyName}}</div>
             </div>
         </ng-template>
     
-        <ng-template name="contact" let-data="data">
+        <ng-template slot="contact" let-data="data">
             <div>
                 <div class="bold">{{data.contactName}}</div>
                 <div class="small">{{data.contactTitle}}</div>
             </div>
         </ng-template>
     
-        <ng-template name="address" let-data="data">
+        <ng-template slot="address" let-data="data">
             <div>
                 <div class="small">{{data.address}}</div>
                 <div class="small">{{data.postalCode}} <span>{{data.city}}</span></div>
             </div>
         </ng-template>
     
-        <ng-template name="country" let-text="text">
+        <ng-template slot="country" let-text="text">
             <div><img [src]="flags[text]"/>{{text}}</div>
         </ng-template>
     
-        <ng-template name="phone" let-data="data">
+        <ng-template slot="phone" let-data="data">
             <div>
                 <div class="small phone">{{data.phone}}</div>
                 <div class="small fax">{{data.fax}}</div>
