@@ -5,12 +5,14 @@
   "author": "ActiveWidgets SARL",
   "license": "MIT",
   "type": "module",
-  "main": "./dist/ax-angular.esm.js",
+  "main": "./dist/style-inject.js",
   "types": "./index.d.ts",
+  "sideEffects": false,
   "exports": {
-    "types": "./index.d.ts",
-    "import": "./dist/ax-angular.esm.js",
-    "require": "./dist/ax-angular.umd.cjs"
+    ".": "./dist/style-inject.js",
+    "./index.js": "./dist/index.js",
+    "./index.css": "./dist/index.css",
+    "./style-inject": "./dist/style-inject.js"
   },
   "files": [
     "dist",
