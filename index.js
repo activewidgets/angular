@@ -5,10 +5,8 @@
  */
 
 import converter from '@activewidgets/frameworks/angular';
-import {Datagrid as _Datagrid, Row as _Row, Cells as _Cells} from '@activewidgets/datagrid/js';
+import {Datagrid as _Datagrid, Row as _Row, Cells as _Cells} from '@activewidgets/datagrid';
 import * as angular from '@angular/core';
-
-import '@activewidgets/datagrid/dist/datagrid.css';
 
 export const {component: AngularComponent, inject, AxName, AxContent, AxChildren, AxOutlet, AxDynamic, AxTemplates, AxModule} = converter(angular);
 

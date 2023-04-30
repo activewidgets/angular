@@ -16,6 +16,7 @@ export default {
     ],
     resolve: {
         alias: {
+            '@activewidgets/datagrid': '@activewidgets/datagrid/style-inject',
             '@activewidgets/angular': resolve('./index.js')
         }    
     }

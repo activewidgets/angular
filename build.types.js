@@ -1,6 +1,6 @@
 import fs from 'fs';
 import {Angular as converter} from '@activewidgets/frameworks';
-import * as universal from '@activewidgets/datagrid/js';
+import * as universal from '@activewidgets/datagrid/index.js';
 import * as core from '@angular/core';
 
     
