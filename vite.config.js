@@ -7,7 +7,15 @@ export default {
     root: 'examples',
     build: {
         outDir: '../out',
-        emptyOutDir: true
+        emptyOutDir: true,
+        rollupOptions: {
+            output: {
+                manualChunks: {
+                    core: ['@angular/core', '@angular/common', '@angular/platform-browser', '@angular/platform-browser-dynamic'],
+                    compiler: ['@angular/compiler']
+                }
+            }
+        }
     },
     plugins: [
         puppeteer('../test/visual/*.js'),
